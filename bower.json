@@ -1,0 +1,19 @@
+{
+  "name": "myApp",
+  "version": "0.0.0",
+  "authors": [
+    "Prasanna Kapate <prasanna.1616@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

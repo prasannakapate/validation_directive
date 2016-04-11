@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Directive Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="library/angular/angular.js"></script>
+    <script src="src/register-validator-directive.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller='Ctrl'>
+        <form class="row form-horizontal" name="myForm" novalidate>
+            <div class="control-group">
+                <div class="col-lg-5">
+                    <input type="password" name="password" class="form-control" placeholder="Password" ng-model="vm.registerPassword" register-validator>
+                    <div ng-hide="!selected">
+                        <div ng-class="lengthValidator"> Passwords should be at least 8 characters </div>
+                        <div class="clearfix"></div>
+                        <div ng-class="lowercaseValidator"> Must contain at leaset 1 lowercase letter </div>
+                        <div class="clearfix"></div>
+                        <div ng-class="uppercaseValidator"> Must contain at leaset 1 uppercase letter </div>
+                        <div class="clearfix"></div>
+                        <div ng-class="numberValidator"> Must contain at leaset 1 number </div>
+                        <div class="clearfix"></div>
+                        <div ng-class="spacesValidator"> Should not have leading and trailing spaces </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<!-- http://jsfiddle.net/adamdbradley/Qdk5M/ -->
